@@ -1,10 +1,8 @@
 Guía Completa JUnit y Mockito incluye Spring Boot Test
 Andrés Guzmán
 
-Introducción y creando el proyecto Spring
-11:52
-Creando las clases del modelo
-10:31
+Proyecto bancario. Spring Boot: Creando las clases del modelo
+
 Creando los repositorios
 05:34
 Implementando la clase de servicio (Service)
