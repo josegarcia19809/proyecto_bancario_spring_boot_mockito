@@ -1,10 +1,8 @@
 Guía Completa JUnit y Mockito incluye Spring Boot Test
 Andrés Guzmán
 
-Proyecto bancario. Spring Boot: Creando los repositorios
+Proyecto bancario. Spring Boot: Implementando la clase de servicio (Service)
 
-Implementando la clase de servicio (Service)
-06:15
 Escribiendo nuestros tests con JUnit y mockito
 11:40
 Test verify
