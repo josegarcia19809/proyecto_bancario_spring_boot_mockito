@@ -2,8 +2,10 @@ package com.jgarcia.proyecto_bancario;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
+import com.jgarcia.proyecto_bancario.exceptions.DineroInsuficienteException;
 import com.jgarcia.proyecto_bancario.repositories.BancoRepository;
 import com.jgarcia.proyecto_bancario.repositories.CuentaRepository;
 import com.jgarcia.proyecto_bancario.services.CuentaService;
@@ -41,14 +43,13 @@ class ProyectoBancarioApplicationTests {
         assertEquals("1000", saldoOrigen.toPlainString());
         assertEquals("2000", saldoDestino.toPlainString());
 
-        // Hacemos una transferencia y dejamos las pruebas preparadas
-        service.transferir(1L, 2L, new BigDecimal("100"), 1L);
+        // Hacemos la transferencia de 500 pesos
+        service.transferir(1L, 2L, new BigDecimal("1500"), 1L);
 
+        // Volvemos a revisar los saldos
         saldoOrigen = service.revisarSaldo(1L);
         saldoDestino = service.revisarSaldo(2L);
-
-        assertEquals("900", saldoOrigen.toPlainString());
-        assertEquals("2100", saldoDestino.toPlainString());
+        assertEquals("500", saldoOrigen.toPlainString());
+        assertEquals("2500", saldoDestino.toPlainString());
     }
-
 }

@@ -1,9 +1,9 @@
 Guía Completa JUnit y Mockito incluye Spring Boot Test
 Andrés Guzmán
 
-Proyecto bancario. Spring Boot: Escribiendo nuestros tests con JUnit y mockito
+Proyecto bancario. Spring Boot: Exception Saldo insuficiente
 
-Test verify
+Test verify (Quedará pendiente)
 05:31
 Escribiendo tests assertThrow para afirmar que la excepción lanzada sea correcta
 12:21
