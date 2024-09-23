@@ -44,12 +44,14 @@ class ProyectoBancarioApplicationTests {
         assertEquals("2000", saldoDestino.toPlainString());
 
         // Hacemos la transferencia de 500 pesos
-        service.transferir(1L, 2L, new BigDecimal("1500"), 1L);
+        assertThrows(DineroInsuficienteException.class, () -> {
+            service.transferir(1L, 2L, new BigDecimal("1500"), 1L);
+        });
 
         // Volvemos a revisar los saldos
         saldoOrigen = service.revisarSaldo(1L);
         saldoDestino = service.revisarSaldo(2L);
-        assertEquals("500", saldoOrigen.toPlainString());
-        assertEquals("2500", saldoDestino.toPlainString());
+        assertEquals("1000", saldoOrigen.toPlainString());
+        assertEquals("2000", saldoDestino.toPlainString());
     }
 }
